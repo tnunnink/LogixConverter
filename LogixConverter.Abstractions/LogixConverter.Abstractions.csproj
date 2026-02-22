@@ -4,6 +4,21 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeBuildOutput>true</IncludeBuildOutput>
+        <PackageId>LogixConverter.Abstractions</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>Timothy Nunnink</Authors>
+        <Description>Abstractions for converting Logix Designer project files.</Description>
+        <PackageTags>csharp l5x acd logix plc-programming rockwell-automation</PackageTags>
+        <RepositoryUrl>https://github.com/tnunnink/LogixConverter</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
 </Project>

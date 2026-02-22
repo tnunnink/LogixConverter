@@ -4,10 +4,25 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeBuildOutput>true</IncludeBuildOutput>
+        <PackageId>LogixConverter.LogixSdk</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>Timothy Nunnink</Authors>
+        <Description>Logix converter implementation using the Rockwell Logix Designer SDK.</Description>
+        <PackageTags>csharp l5x acd logix plc-programming rockwell-automation</PackageTags>
+        <RepositoryUrl>https://github.com/tnunnink/LogixConverter</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\LogixConverter.Abstractions\LogixConverter.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
     <ItemGroup>
