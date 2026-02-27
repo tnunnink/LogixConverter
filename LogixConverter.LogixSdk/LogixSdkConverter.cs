@@ -237,14 +237,14 @@ public class LogixSdkConverter(string? packageLocation = null) : ILogixFileConve
     }
 
     /// <summary>
-    /// Extracts the specified NuGet package file to a local cache directory in the user application directory.
+    /// Extracts the specified NuGet package file to a common cache directory for all users on the machine.
     /// Also moves the FSTP adapter executable to the same location as the DLL file since that is where it will look
     /// for the application when loading projects.
     /// </summary>
     private static string ExtractToCache(string packagePath)
     {
         var cacheRoot = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),
             "LogixDesignerPackageCache");
 
         var folderName = Path.GetFileNameWithoutExtension(packagePath);
