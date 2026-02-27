@@ -7,7 +7,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IncludeBuildOutput>true</IncludeBuildOutput>
         <PackageId>LogixConverter.LogixSdk</PackageId>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Authors>Timothy Nunnink</Authors>
         <Description>Logix converter implementation using the Rockwell Logix Designer SDK.</Description>
         <PackageTags>csharp l5x acd logix plc-programming rockwell-automation</PackageTags>

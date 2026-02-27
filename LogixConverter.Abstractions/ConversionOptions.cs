@@ -5,5 +5,5 @@
 /// </summary>
 public sealed record ConversionOptions(
     bool Overwrite = true,
-    bool Detailed = true
+    bool Detailed = false   
 );
