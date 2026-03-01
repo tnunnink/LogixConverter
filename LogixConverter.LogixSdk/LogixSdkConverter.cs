@@ -29,7 +29,7 @@ public class LogixSdkConverter(string? packageLocation = null) : ILogixFileConve
     {
         options ??= new ConversionOptions();
         var source = ResolveSourceFile(filePath, out var tempFile);
-        var destination = ResolveDesitnationFile(savePath);
+        var destination = ResolveDestinationFile(savePath);
 
         var stopwatch = Stopwatch.StartNew();
 
@@ -244,7 +244,7 @@ public class LogixSdkConverter(string? packageLocation = null) : ILogixFileConve
     private static string ExtractToCache(string packagePath)
     {
         var cacheRoot = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
             "LogixDesignerPackageCache");
 
         var folderName = Path.GetFileNameWithoutExtension(packagePath);
@@ -314,7 +314,7 @@ public class LogixSdkConverter(string? packageLocation = null) : ILogixFileConve
     /// <param name="savePath">The intended path to save the destination file, including the file name and extension.</param>
     /// <returns>Returns the absolute path of the destination file.</returns>
     /// <exception cref="InvalidOperationException">Thrown when the output directory cannot be determined from the provided save path.</exception>
-    private static string ResolveDesitnationFile(string savePath)
+    private static string ResolveDestinationFile(string savePath)
     {
         var fullSavePath = Path.GetFullPath(savePath);
         var saveDirectory = Path.GetDirectoryName(fullSavePath);
